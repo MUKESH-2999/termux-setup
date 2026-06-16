@@ -20,8 +20,9 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 # 4. Download your custom .zshrc directly from your GitHub repo
 echo "Fetching your custom .zshrc..."
-```bash
-cp .zshrc ~/.zshrc
+
+curl -o ~/.zshrc https://raw.githubusercontent.com/MUKESH-2999/termux-setup/main/.zshrc
+
 # 5. Change default shell to Zsh
 chsh -s zsh
 
