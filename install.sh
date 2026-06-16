@@ -5,6 +5,7 @@ echo "Starting Termux environment setup..."
 # 1. Update system and install dependencies
 pkg update && pkg upgrade -y
 pkg install git curl zsh -y
+pkg install figlet
 
 # 2. Install Oh My Zsh (unattended mode so it doesn't pause the script)
 echo "Installing Oh My Zsh..."
