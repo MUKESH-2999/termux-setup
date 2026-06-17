@@ -7,19 +7,17 @@ pkg update && pkg upgrade -y
 pkg install git curl zsh -y
 pkg install figlet
 
-# 2. Install Oh My Zsh (unattended mode so it doesn't pause the script)
+# 2. Install Oh My Zsh 
 echo "Installing Oh My Zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
-# 3. Clone your favorite plugins
+# 3. Clone plugins
 echo "Installing plugins..."
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-# Add any other themes or plugins you use here (e.g., Powerlevel10k)
-# git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-# 4. Download your custom .zshrc directly from your GitHub repo
+# 4. Download my custom .zshrc 
 echo "Fetching your custom .zshrc..."
 
 curl -o ~/.zshrc https://raw.githubusercontent.com/MUKESH-2999/termux-setup/main/.zshrc
